@@ -7,14 +7,14 @@ const Cart = () => {
   const { cart } = useSelector((state) => state);
   const [totalAmount, setTotalAmount] = useState(0);
 
-  useEffect(() => {
-    setTotalAmount(cart.reduce((acc, curr) => acc + curr.price, 0));
-  }, [cart]);
+  // useEffect(() => {
+  //   setTotalAmount(cart.reduce((acc, curr) => acc + curr.price, 0));
+  // }, [cart]);
   return (
     <div>
-      {cart.length > 0 ? (
+      {/* {cart.length > 0 ? (
         <div>
-          {cart.map((item, index) => {
+          {cart.map((item, index) => {s
             return <CartItem key={item.id} item={item} itemIndex={index} />;
           })}
           <div>
@@ -29,14 +29,13 @@ const Cart = () => {
             <button>CheckOut Now</button>
           </div>
         </div>
-      ) : (
-        <div>
-          <h1>Cart Empty</h1>
-          <Link to={"/"}>
-            <button>Shop Now</button>
-          </Link>
-        </div>
-      )}
+      ) : ( */}
+      <div>
+        <h1>Cart Empty</h1>
+        <Link to={"/"}>
+          <button>Shop Now</button>
+        </Link>
+      </div>
     </div>
   );
 };
